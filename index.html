@@ -6,16 +6,16 @@
 
    <title>eggly</title>
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-  <!--  <link rel="stylesheet" href="assets/css/normalize.css">
-   <link rel="stylesheet" href="assets/css/eggly.css">
-   <link rel="stylesheet" href="assets/css/animations.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/eggly.css">
+   <link rel="stylesheet" href="css/animations.css"> 
       <style type="text/css"></style>
 </head>
 <body ng-controller="MainCtrl">
  <div class="container-fluid">
  	<div class="row">
  		<div class="col-sm-3 col-md-2 sidebar">
- 			<a href="#" ng-click="setCurrentCategory(null)"><img class="logo" src="assets/img/eggly-logo.png"></a>
+ 			<a href="#" ng-click="setCurrentCategory(null)"><img class="logo" src="img/eggly-logo.png"></a>
  			<ul class="nav nav-sidebar">
  				<li ng-repeat ="category in categories" ng-class="{'active':isCurrentCategory(category)}">
  				<a href="#" ng-click="setCurrentCategory(category)">{{category.name}}</a>
