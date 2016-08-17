@@ -1,10 +1,25 @@
 angular.module('Eggly', [
-
-]).
-controller('MainCtrl', function($scope){
+  'categories',
+  'categories.bookmarks',
+  'ui.router'
+]).config(['$stateProvider' , function($stateProvider){
+    $stateProvider.state(
+      'index', {
+        url:'',
+        templateUrl:'app/categories/categories.tmpl.html',
+        controller:'MainCtrl'
+      },
+      /*'home', {
+        url:'/home',
+         views:{
+          "content":{templateUrl:'app/categories/test.html'}
+         },
+       
+        controller:'MainCtrl'*/
+      })
+}]).controller('MainCtrl', function($scope){
   $scope.hello = 'world';
   $scope.categories = [
-
   	{"id": 0, "name": "Development"},
     {"id": 1, "name": "Design"},
     {"id": 2, "name": "Excercise"},
